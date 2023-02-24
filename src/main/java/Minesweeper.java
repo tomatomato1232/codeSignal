@@ -5,16 +5,16 @@ public class Minesweeper {
 
         int[][] ansMatrix = new int[matrix.length][matrix[0].length];
 
-        for (int i = 0; i < matrix.length; i++){
-            for (int j = 0; j < matrix[0].length; j++){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
                 int cnt = 0;
-                for(int k = -1; k < 2; k++){
-                    for(int l = -1; l < 2; l++){
-                        if(k==0 && l==0){
+                for (int k = -1; k < 2; k++) {
+                    for (int l = -1; l < 2; l++) {
+                        if (k == 0 && l == 0) {
                             continue;
                         }
-                        if(isValidIndex(matrix,i+k,j+l)){
-                            if(matrix[i+k][j+l]){
+                        if (isValidIndex(matrix, i + k, j + l)) {
+                            if (matrix[i + k][j + l]) {
                                 cnt++;
                             }
                         }
